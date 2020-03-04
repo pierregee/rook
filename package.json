@@ -8,7 +8,8 @@
   "scripts": {
     "test": "jest",
     "start": "styleguidist server",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "commit": "npx git-cz"
   },
   "files": [
     "/lib"
@@ -40,5 +41,10 @@
   "dependencies": {
     "react-styleguidist": "10.6.2",
     "webpack": "4.41.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
