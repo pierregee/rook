@@ -5,6 +5,3 @@
 /umd
 npm-debug.log*
 yarn-error.log*
-
-guide.sh
-/dist-docs
