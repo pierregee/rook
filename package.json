@@ -2,12 +2,13 @@
   "name": "rook",
   "version": "1.0.0",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "author": "pierregee",
   "license": "MIT",
   "description": "Component library / Design system that will be used in my recent ongoing side projects",
   "scripts": {
     "test": "jest",
-    "build": "rollup -c",
+    "build": "rm -rf lib && rollup -c",
     "commit": "npx git-cz"
   },
   "files": [
@@ -24,6 +25,7 @@
     "@babel/core": "7.8.6",
     "@babel/preset-env": "7.8.6",
     "@babel/preset-react": "7.8.3",
+    "@rollup/plugin-node-resolve": "7.1.1",
     "@testing-library/react": "9.4.1",
     "@types/jest": "25.1.3",
     "babel-jest": "25.1.0",
@@ -34,16 +36,13 @@
     "react": "16.13.0",
     "react-dom": "16.13.0",
     "rollup": "1.32.0",
-    "rollup-plugin-commonjs": "10.1.0",
-    "rollup-plugin-node-resolve": "5.2.0",
     "rollup-plugin-peer-deps-external": "2.2.2",
     "rollup-plugin-prettier": "0.6.0",
-    "rollup-plugin-typescript": "1.0.1",
+    "rollup-plugin-typescript2": "0.26.0",
     "ts-jest": "25.2.1",
     "typescript": "3.8.3"
   },
   "dependencies": {
-    "@rollup/plugin-typescript": "3.0.0",
     "webpack": "4.41.6"
   },
   "config": {

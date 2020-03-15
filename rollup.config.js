@@ -1,6 +1,6 @@
-import resolve from 'rollup-plugin-node-resolve'
+import resolve from '@rollup/plugin-node-resolve'
+import typescript from 'rollup-plugin-typescript2'
 import external from 'rollup-plugin-peer-deps-external'
-import typescript from 'rollup-plugin-typescript'
 import prettier from 'rollup-plugin-prettier'
 import packageJSON from './package.json'
 
@@ -14,12 +14,12 @@ export default [
     plugins: [
       external(),
       resolve(),
+      typescript({}),
       prettier({
         tabWidth: 2,
         singleQuote: false,
         parser: 'babel',
       }),
-      typescript(),
       // Run plugin with prettier options.
     ],
   },
