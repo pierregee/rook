@@ -1,14 +1,6 @@
 import * as React from 'react'
-import styled from 'styled-components'
+import * as Style from './style'
 
-const StyledStack = styled.div`
-  display: block;
-  color: green;
-  background-color: green;
-  height: 200px;
-  width: 200px;
-`
-
-const Stack = ({ children }) => <StyledStack>{children}</StyledStack>
+const Stack = ({ children, ...props }: any) => <Style.Stack {...props}>{children}</Style.Stack>
 
 export default Stack
